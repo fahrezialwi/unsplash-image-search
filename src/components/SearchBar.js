@@ -2,13 +2,15 @@ import React, { Component } from 'react'
 
 class SearchBar extends Component {
 
-    state = {
-        keyword: ''
+    constructor(props) {
+        super(props)
+        this.state = {
+            keyword: '',
+        }
     }
 
     onSubmitForm = (e) => {
         e.preventDefault()
-
         this.props.fun(this.state.keyword)
     }
 
@@ -35,16 +37,3 @@ class SearchBar extends Component {
 }
 
 export default SearchBar
-
-// onSubmit, ketika tag input di dalam form di-enter
-// e.preventDefault() akan menghentikan halaman dari refresh
-// onChange, ketika ada perubahan di tag input text
-// event.target.value adalah property berisi teks yang kita ketik
-// this.setState() merupakan function untuk mengubah data pada state
-// setState() akan menerima satu buah parameter yaitu object {}
-
-// axios.get().then().catch()
-// .then() akan menerima function yang akan dijalankan jika berhasil melakukan request
-// (res) => {}, res akan berisi respon dari database
-// .catch() akan menerima function yang akan dijalankan jika gagal request
-// (err) => {}, err akan berisi pesan error

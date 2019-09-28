@@ -2,13 +2,8 @@ import React, { Component } from 'react'
 
 class ImageList extends Component {
 
-    renderList = () => {
-        
-        // this.props.data = [{}, {}, {}]
-        // item = {}
-        // hasil = [<img/>, <img/>, <img/>]
-        
-        let hasil = this.props.data.map((item, index) => {
+    renderList = () => { 
+        return this.props.data.map((item, index) => {
             return (
                 <div 
                     className="col-4" 
@@ -35,8 +30,6 @@ class ImageList extends Component {
                 </div>
             ) 
         })
-
-        return hasil
     }
     
     render() {
@@ -49,8 +42,3 @@ class ImageList extends Component {
 }
 
 export default ImageList
-
-// this.props.data = [{}, {}, {}]
-// {this.renderList()}
-// Akan running function renderlist, function tersebut akan me-return array of images
-// Kemudian apa yang di return akan di render berbarengan dengan komponen yang lain 
