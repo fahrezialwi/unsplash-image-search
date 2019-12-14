@@ -5,10 +5,7 @@ class ImageList extends Component {
     renderList = () => { 
         return this.props.data.map((item, index) => {
             return (
-                <div 
-                    className="col-4" 
-                    key={index}
-                >
+                <div className="col-4" key={index}>
                     <a 
                         href={item.urls.full} 
                         key={index} 
@@ -17,7 +14,7 @@ class ImageList extends Component {
                     >
                         <img 
                             src={item.urls.regular} 
-                            alt={item.description}
+                            alt=""
                             style={{
                                 objectFit: "cover",
                                 objectPosition: "50% 0",
